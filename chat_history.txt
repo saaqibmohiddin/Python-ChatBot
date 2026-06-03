@@ -1,0 +1,45 @@
+print("🤖 ChatBot: Hello! Type 'bye' to exit.")
+
+while True:
+    user = input("You: ").lower()
+
+    with open("chat_history.txt", "a") as file:
+        file.write(f"You: {user}\n")
+
+    if user == "hello":
+        response = "Hi! How are you?"
+
+    elif user == "how are you":
+        response = "I am fine. Thank you!"
+
+    elif user == "your name":
+        response = "My name is Python Bot."
+
+    elif user == "what is ai":
+        response = "AI stands for Artificial Intelligence."
+
+    elif user == "who created you":
+        response = "I was created using Python."
+
+    elif user == "good morning":
+        response = "Good Morning! Have a great day."
+
+    elif user == "good night":
+        response = "Good Night! Sweet dreams."
+
+    elif user == "bye":
+        response = "Goodbye!"
+        print("🤖 ChatBot:", response)
+
+        with open("chat_history.txt", "a") as file:
+            file.write(f"ChatBot: {response}\n")
+
+        break
+
+    else:
+        response = "Sorry, I don't understand."
+
+    print("🤖 ChatBot:", response)
+
+    with open("chat_history.txt", "a") as file:
+        file.write(f"ChatBot: {response}\n")
