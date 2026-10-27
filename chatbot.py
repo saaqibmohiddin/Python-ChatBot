@@ -1,32 +1,90 @@
-print("🤖 ChatBot: Hello! Type 'bye' to exit.")
 
-while True:
-    user = input("You: ").lower()
+import streamlit as st
+from datetime import datetime
+
+# Page configuration
+st.set_page_config(
+    page_title="PyTalk - Python ChatBot",
+    page_icon="🤖",
+    layout="centered"
+)
+
+# Chatbot responses
+def get_response(user):
+    user = user.lower().strip()
 
     if user == "hello":
-        print("🤖 ChatBot: Hi! How are you?")
+        return "Hi! How are you?"
 
     elif user == "how are you":
-        print("🤖 ChatBot: I am fine. Thank you!")
+        return "I am fine. Thank you!"
 
     elif user == "your name":
-        print("🤖 ChatBot: My name is Python Bot.")
+        return "My name is Python Bot."
 
     elif user == "what is ai":
-        print("🤖 ChatBot: AI stands for Artificial Intelligence.")
+        return "AI stands for Artificial Intelligence."
 
     elif user == "who created you":
-        print("🤖 ChatBot: I was created using Python.")
+        return "I was created using Python."
 
     elif user == "good morning":
-        print("🤖 ChatBot: Good Morning! Have a great day.")
+        return "Good Morning! Have a great day."
 
     elif user == "good night":
-        print("🤖 ChatBot: Good Night! Sweet dreams.")
+        return "Good Night! Sweet dreams."
 
     elif user == "bye":
-        print("🤖 ChatBot: Goodbye!")
-        break
+        return "Goodbye!"
 
     else:
-        print("🤖 ChatBot: Sorry, I don't understand.")
+        return "Sorry, I don't understand."
+
+# Session state
+if "messages" not in st.session_state:
+    st.session_state.messages = [
+        {
+            "role": "assistant",
+            "content": "Hello! Welcome to PyTalk. How can I help you?"
+        }
+    ]
+
+# Heading
+st.title("🤖 PyTalk")
+st.subheader("Your Personal Python ChatBot")
+st.write("Chat with your Python-powered assistant.")
+
+# Clear chat button
+if st.button("🗑️ Clear Chat"):
+    st.session_state.messages = [
+        {
+            "role": "assistant",
+            "content": "Hello! Welcome to PyTalk. How can I help you?"
+        }
+    ]
+    st.rerun()
+
+# Display chat history
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.write(message["content"])
+
+# Chat input
+user_input = st.chat_input("Type your message here...")
+
+if user_input:
+    st.session_state.messages.append({
+        "role": "user",
+        "content": user_input
+    })
+
+    response = get_response(user_input)
+
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response
+    })
+
+    st.rerun()
+
+st.caption("Built with Python and Streamlit | PyTalk")
