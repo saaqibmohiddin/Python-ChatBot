@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PyTalk | Python Learning Assistant</title>
+<style>
+:root {
+  --bg:#0b1020;--panel:#121a2d;--panel2:#19243a;
+  --text:#edf2ff;--muted:#9ba9c2;--accent:#7c8cff;
+  --border:#293650;--green:#35d39a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);
+font-family:Inter,Arial,sans-serif}
+button,input{font:inherit}
+button{cursor:pointer}
+.app{max-width:1200px;margin:auto;padding:22px}
+header{display:flex;justify-content:space-between;align-items:center;
+gap:15px;margin-bottom:22px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{background:#26345d;border-radius:15px;padding:12px;font-size:25px}
+h1{font-size:24px;margin:0}
+.subtitle{color:var(--muted);font-size:13px;margin-top:5px}
+.status{color:var(--green);font-size:13px}
+.layout{display:grid;grid-template-columns:270px 1fr;gap:18px}
+.panel{background:var(--panel);border:1px solid var(--border);
+border-radius:18px;padding:18px}
+h2{font-size:16px;margin:0 0 15px}
+.topic{display:block;width:100%;text-align:left;margin:8px 0;
+padding:11px;border:1px solid var(--border);border-radius:10px;
+background:var(--panel2);color:var(--text)}
+.topic:hover,.btn:hover{border-color:var(--accent)}
+.small{font-size:12px;color:var(--muted);line-height:1.6}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.btn{border:1px solid var(--border);border-radius:10px;padding:10px 13px;
+background:var(--panel2);color:var(--text)}
+.primary{background:var(--accent);border-color:var(--accent);color:white}
+.chat-panel{min-height:650px;display:flex;flex-direction:column}
+.chat-title{display:flex;justify-content:space-between;align-items:center;
+padding-bottom:15px;border-bottom:1px solid var(--border)}
+.messages{flex:1;min-height:390px;max-height:520px;overflow-y:auto;
+padding:15px 2px}
+.message{display:flex;gap:10px;margin:15px 0;align-items:flex-start}
+.avatar{width:34px;height:34px;flex-shrink:0;border-radius:11px;
+display:grid;place-items:center;background:#27365d}
+.bubble{max-width:88%;padding:12px 14px;border-radius:13px;
+background:var(--panel2);line-height:1.65;font-size:14px;
+overflow-wrap:anywhere}
+.user{flex-direction:row-reverse}
+.user .bubble{background:#34447d}
+.time{font-size:10px;color:var(--muted);margin-top:5px}
+.composer{display:flex;gap:9px;padding-top:15px;border-top:1px solid var(--border)}
+.composer input{flex:1;min-width:0;padding:13px;border-radius:11px;
+border:1px solid var(--border);background:var(--panel2);color:white;outline:none}
+.composer input:focus{border-color:var(--accent)}
+.quiz{margin-top:18px;display:none}
+.quiz-option{display:block;padding:12px;margin:8px 0;border:1px solid var(--border);
+border-radius:10px;background:var(--panel2)}
+.quiz-option input{margin-right:9px}
+.progress{height:7px;background:#28344b;border-radius:10px;margin:15px 0}
+.progress div{height:100%;background:var(--accent);border-radius:10px;width:0}
+pre{white-space:pre-wrap;background:#0b1222;padding:12px;border-radius:9px;
+overflow-x:auto;color:#b8d1ff}
+code{color:#b8d1ff}
+.footer{text-align:center;color:var(--muted);font-size:12px;margin:25px 0}
+@media(max-width:750px){
+.app{padding:13px}.layout{grid-template-columns:1fr}
+.sidebar{order:2}.chat-panel{min-height:580px}
+.messages{min-height:350px}header{align-items:flex-start}
+.status{font-size:11px}
+}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+ <div class="logo">
+  <div class="logo-icon">🤖</div>
+  <div><h1>PyTalk</h1><div class="subtitle">Your Personal Python Learning Assistant</div></div>
+ </div>
+ <div class="status">● Online demo</div>
+</header>
+
+<div class="layout">
+<aside class="panel sidebar">
+ <h2>🚀 Learning Topics</h2>
+ <div id="topics"></div>
+ <hr style="border-color:var(--border);margin:18px 0">
+ <h2>🎓 Practice</h2>
+ <button class="btn primary" style="width:100%" onclick="startQuiz()">Start Python Quiz</button>
+ <button class="btn" style="width:100%;margin-top:9px" onclick="downloadChat()">📥 Download Chat History</button>
+ <p class="small">Explore Python fundamentals, programming, AI, machine learning and web technologies.</p>
+</aside>
+
+<main>
+<section class="panel chat-panel">
+ <div class="chat-title">
+  <div><h2 style="margin:0">💬 Chat with PyTalk</h2>
+  <div class="small">Ask a programming question to begin.</div></div>
+  <button class="btn" onclick="clearChat()">Clear Chat</button>
+ </div>
+ <div class="messages" id="messages"></div>
+ <form class="composer" id="chatForm">
+  <input id="userInput" placeholder="Ask PyTalk a question..." autocomplete="off">
+  <button class="btn primary" type="submit">Send ➤</button>
+ </form>
+</section>
+
+<section class="panel quiz" id="quiz">
+ <h2>🎓 Python Knowledge Quiz</h2>
+ <div id="quizContent"></div>
+</section>
+</main>
+</div>
+<div class="footer">🤖 PyTalk · Built with Python and Streamlit · Browser demonstration</div>
+</div>
+
+<script>
+const topics=[
+"What is Python?","Explain Python data types","Features of Python",
+"Advantages of Python","What is OOP?","What is Artificial Intelligence?",
+"Explain Machine Learning","What is Deep Learning?","What is NLP?",
+"What is Generative AI?","What is SQL?","What is HTML?"
+];
+
+const topicBox=document.getElementById("topics");
+topics.forEach(t=>{
+ const b=document.createElement("button");
+ b.className="topic";b.textContent="📘 "+t;
+ b.onclick=()=>sendMessage(t);
+ topicBox.appendChild(b);
+});
+
+function response(input){
+ let q=input.toLowerCase().trim().replace(/[?!.,]/g,"").replace(/\s+/g," ");
+ if(["hi","hello","hey","hai","good morning","good afternoon","good evening"].includes(q))
+ return "Hello! 👋 Welcome to PyTalk. What would you like to learn today?";
+ if(q.includes("how are you"))return "I'm doing great! 😊 Ready to help you learn Python and technology.";
+ if(q.includes("your name")||q.includes("who are you"))return "I'm PyTalk, your personal Python learning chatbot. 🤖";
+ if(q.includes("who created you"))return "I was developed using Python and Streamlit.";
+ if(["bye","goodbye","see you"].includes(q))return "Goodbye! Keep learning and coding. See you again! 👋";
+ if(q.includes("help")||q.includes("what can you do"))return "🤖 **PyTalk can help you with:**\n\n- Python fundamentals\n- Data types and operators\n- Functions and OOP\n- Programming examples\n- Artificial Intelligence\n- Machine Learning and Deep Learning\n- HTML, CSS and JavaScript\n- SQL and databases\n- Interview preparation\n\nTry asking: What is Python?";
+ if(q.includes("what is python")||q==="python")return "🐍 **What is Python?**\n\nPython is a high-level, interpreted, general-purpose programming language.\n\n**Features:**\n1. Easy to learn and read.\n2. Simple syntax.\n3. Supports OOP.\n4. Large collection of libraries.\n5. Cross-platform compatibility.\n\n**Applications:** AI, ML, web development, data science and automation.\n\nExample:\n```python\nprint('Hello, World!')\n```";
+ if(q.includes("features of python"))return "**Features of Python**\n\n1. Simple and readable syntax.\n2. Interpreted language.\n3. Dynamically typed.\n4. Object-oriented.\n5. Portable.\n6. Open source.\n7. Large standard library.";
+ if(q.includes("advantages of python"))return "**Advantages of Python**\n\n1. Easy to learn.\n2. Faster development.\n3. Large community support.\n4. Many libraries and frameworks.\n5. Useful in AI, ML and automation.";
+ if(q.includes("disadvantages of python"))return "**Disadvantages of Python**\n\n1. Can be slower than compiled languages.\n2. May consume more memory in some applications.\n3. Not the first choice for every mobile application.\n4. Dynamic typing can allow runtime errors.";
+ if(q.includes("data types"))return "**Python Data Types**\n\n| Type | Example |\n|---|---|\n| int | 10 |\n| float | 10.5 |\n| str | Hello |\n| bool | True |\n| list | [1,2,3] |\n| tuple | (1,2,3) |\n| set | {1,2,3} |\n| dict | {name: Sam} |\n\nExample:\n```python\nname = 'Python'\nage = 25\nprice = 99.5\nis_active = True\nprint(type(name))\n```";
+ if(q.includes("list and tuple")||q.includes("difference between list and tuple"))return "**List vs Tuple**\n\n**List:** Uses square brackets `[]`; mutable, so values can be changed.\n\nExample: `numbers = [10, 20, 30]`\n\n**Tuple:** Uses parentheses `()`; immutable, so values cannot be changed.\n\nExample: `numbers = (10, 20, 30)`";
+ if(q.includes("dictionary")||q.includes("dict in python"))return "**Python Dictionary**\n\nA dictionary stores information as key-value pairs.\n\n```python\nstudent = {\n  'name': 'Alex',\n  'age': 21,\n  'course': 'Python'\n}\nprint(student['name'])\n```";
+ if(q.includes("set in python"))return "**Python Set**\n\nA set stores unique elements and does not guarantee a fixed order.\n\n```python\nnumbers = {10, 20, 20, 30}\nprint(numbers)\n```";
+ if(q.includes("function"))return "**Python Functions**\n\nA function is a reusable block of code.\n\n```python\ndef greet(name):\n    print('Hello', name)\n\ngreet('Alex')\n```\n\nThe `def` keyword defines a function.";
+ if(q.includes("oop")||q.includes("object oriented"))return "**Object-Oriented Programming (OOP)**\n\nOOP organizes programs using classes and objects.\n\nFour major principles:\n1. Encapsulation\n2. Inheritance\n3. Polymorphism\n4. Abstraction\n\n```python\nclass Student:\n    def greet(self):\n        print('Hello Student')\ns = Student()\ns.greet()\n```";
+ if(q.includes("class and object"))return "**Class and Object**\n\nA class is a blueprint. An object is an instance of a class.\n\n```python\nclass Car:\n    brand = 'Toyota'\ncar1 = Car()\nprint(car1.brand)\n```";
+ if(q.includes("exception handling"))return "**Exception Handling**\n\nException handling prevents a program from stopping unexpectedly when an error occurs.\n\n```python\ntry:\n    number = int(input('Enter a number: '))\n    print(10 / number)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')\nexcept ValueError:\n    print('Enter a valid number')\n```";
+ if(q.includes("even or odd"))return "**Program: Even or Odd**\n\n```python\nnumber = int(input('Enter a number: '))\nif number % 2 == 0:\n    print('Even number')\nelse:\n    print('Odd number')\n```";
+ if(q.includes("prime number"))return "**Program: Prime Number**\n\n```python\nnumber = int(input('Enter a number: '))\nif number > 1:\n    for i in range(2, int(number ** 0.5) + 1):\n        if number % i == 0:\n            print('Not prime')\n            break\n    else:\n        print('Prime number')\nelse:\n    print('Not prime')\n```";
+ if(q.includes("factorial"))return "**Program: Factorial**\n\n```python\nnumber = int(input('Enter a number: '))\nfactorial = 1\nfor i in range(1, number + 1):\n    factorial *= i\nprint('Factorial:', factorial)\n```";
+ if(q.includes("fibonacci"))return "**Program: Fibonacci Series**\n\n```python\na, b = 0, 1\nfor i in range(10):\n    print(a)\n    a, b = b, a + b\n```";
+ if(q.includes("palindrome"))return "**Program: Palindrome**\n\n```python\nword = input('Enter a word: ')\nif word == word[::-1]:\n    print('Palindrome')\nelse:\n    print('Not a palindrome')\n```";
+ if(q.includes("reverse a string"))return "**Program: Reverse a String**\n\n```python\ntext = input('Enter text: ')\nprint(text[::-1])\n```";
+ if(q.includes("armstrong"))return "**Program: Armstrong Number**\n\n```python\nnumber = int(input('Enter a number: '))\ndigits = str(number)\ntotal = sum(int(d) ** len(digits) for d in digits)\nprint('Armstrong number' if total == number else 'Not Armstrong')\n```";
+ if(q.includes("artificial intelligence")||q.includes("what is ai"))return "**Artificial Intelligence (AI)**\n\nAI is a field of computer science that develops systems capable of performing tasks that normally require human intelligence.\n\nExamples: voice assistants, chatbots, image recognition, recommendation systems and self-driving technology.";
+ if(q.includes("machine learning"))return "**Machine Learning (ML)**\n\nMachine Learning is a branch of AI that enables computers to learn patterns from data.\n\n**Types:**\n1. Supervised Learning\n2. Unsupervised Learning\n3. Reinforcement Learning\n\nLibraries: Scikit-learn, TensorFlow and PyTorch.";
+ if(q.includes("deep learning"))return "**Deep Learning**\n\nDeep Learning is a subset of Machine Learning that uses multi-layered neural networks.\n\nApplications: image recognition, speech recognition, NLP and autonomous systems.";
+ if(q.includes("natural language processing")||q.includes("what is nlp"))return "**Natural Language Processing (NLP)**\n\nNLP helps computers understand, process and generate human language.\n\nApplications: chatbots, translation, sentiment analysis and speech recognition.";
+ if(q.includes("generative ai"))return "**Generative AI**\n\nGenerative AI creates new content such as text, images, audio and code. Examples include AI writing assistants, image generators and coding assistants.";
+ if(q.includes("what is html"))return "HTML stands for **HyperText Markup Language**. It structures content on web pages.";
+ if(q.includes("what is css"))return "CSS stands for **Cascading Style Sheets**. It controls the appearance and layout of web pages.";
+ if(q.includes("javascript"))return "JavaScript is a programming language used to create interactive web applications.";
+ if(q.includes("what is sql"))return "SQL stands for **Structured Query Language**. It is used to manage and query relational databases.";
+ if(q.includes("what is database"))return "A database is an organized collection of information that can be stored, managed and retrieved.";
+ if(q.includes("what is api"))return "API stands for **Application Programming Interface**. It allows different software applications to communicate.";
+ if(q.includes("what is streamlit"))return "Streamlit is a Python framework for building interactive web applications, especially for data and AI projects.";
+ if(q.includes("what is github"))return "GitHub is a platform for hosting code, managing repositories and collaborating on software projects.";
+ if(q.includes("time")||q.includes("date"))return "Current date and time: "+new Date().toLocaleString();
+ return "I don't have a predefined answer for that question yet.\n\nTry asking:\n- What is Python?\n- Explain Python data types.\n- What is OOP?\n- Write a prime number program.\n- What is Artificial Intelligence?\n- Explain Machine Learning.\n- What is SQL?\n\nUse the Learning Topics section to explore more.";
+}
+
+function escapeHTML(s){
+ return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function formatText(s){
+ let safe=escapeHTML(s);
+ safe=safe.replace(/```([\s\S]*?)```/g,(_,c)=>'<pre><code>'+c.trim()+'</code></pre>');
+ safe=safe.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>');
+ safe=safe.replace(/`([^`]+)`/g,'<code>$1</code>');
+ safe=safe.replace(/\n/g,'<br>');
+ return safe;
+}
+let messages=[];
+try{messages=JSON.parse(localStorage.getItem("pytalk_messages")||"[]");}catch(e){messages=[];}
+if(!messages.length)messages=[{role:"assistant",content:"Hello! 👋 Welcome to PyTalk. How can I help you today?",time:now()}];
+
+function now(){return new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"});}
+function save(){localStorage.setItem("pytalk_messages",JSON.stringify(messages));}
+function render(){
+ const box=document.getElementById("messages");
+ box.innerHTML="";
+ messages.forEach(m=>{
+  const div=document.createElement("div");
+  div.className="message "+(m.role==="user"?"user":"");
+  div.innerHTML='<div class="avatar">'+(m.role==="user"?"👤":"🤖")+'</div><div><div class="bubble">'+formatText(m.content)+'</div><div class="time">'+escapeHTML(m.time)+'</div></div>';
+  box.appendChild(div);
+ });
+ box.scrollTop=box.scrollHeight;
+}
+function sendMessage(text){
+ text=text.trim();if(!text)return;
+ messages.push({role:"user",content:text,time:now()});
+ messages.push({role:"assistant",content:response(text),time:now()});
+ save();render();
+ document.getElementById("userInput").value="";
+}
+document.getElementById("chatForm").addEventListener("submit",e=>{
+ e.preventDefault();sendMessage(document.getElementById("userInput").value);
+});
+function clearChat(){
+ if(!confirm("Clear the complete chat history?"))return;
+ messages=[{role:"assistant",content:"Hello! 👋 Welcome to PyTalk. How can I help you today?",time:now()}];
+ save();render();
+}
+function downloadChat(){
+ const data=messages.map(m=>`${m.time} - ${m.role.toUpperCase()}: ${m.content}`).join("\n\n");
+ const a=document.createElement("a");
+ a.href=URL.createObjectURL(new Blob([data],{type:"text/plain"}));
+ a.download="pytalk_chat_history.txt";a.click();URL.revokeObjectURL(a.href);
+}
+
+const questions=[
+ {q:"Which keyword is used to define a function in Python?",o:["function","def","fun","define"],a:"def"},
+ {q:"Which data type is immutable?",o:["List","Dictionary","Tuple","Set"],a:"Tuple"},
+ {q:"What is the output of print(2 ** 3)?",o:["6","8","9","5"],a:"8"},
+ {q:"Which symbol is used for comments in Python?",o:["//","#","/*","--"],a:"#"},
+ {q:"Which library is commonly used for data analysis?",o:["Pandas","Turtle","Random","OS"],a:"Pandas"}
+];
+let quizIndex=0,score=0,answered=false,selected="";
+function startQuiz(){
+ quizIndex=0;score=0;answered=false;selected="";
+ document.getElementById("quiz").style.display="block";showQuestion();
+ document.getElementById("quiz").scrollIntoView({behavior:"smooth"});
+}
+function showQuestion(){
+ const area=document.getElementById("quizContent");
+ if(quizIndex>=questions.length){
+  area.innerHTML=`<div class="progress"><div style="width:100%"></div></div><h3>🎉 Quiz completed!</h3><h2>Your score: ${score}/${questions.length}</h2><p>${score===5?"Excellent! You answered every question correctly.":"Good effort! Keep practicing Python."}</p><button class="btn primary" onclick="startQuiz()">Restart Quiz</button>`;
+  return;
+ }
+ const q=questions[quizIndex];answered=false;selected="";
+ area.innerHTML=`<div class="progress"><div style="width:${quizIndex/questions.length*100}%"></div></div><p class="small">Question ${quizIndex+1} of ${questions.length}</p><h3>${q.q}</h3><div id="options"></div><div id="feedback"></div><button class="btn primary" id="submitAnswer">Submit Answer</button>`;
+ const opts=document.getElementById("options");
+ q.o.forEach(option=>{
+  const label=document.createElement("label");label.className="quiz-option";
+  label.innerHTML=`<input type="radio" name="answer" value="${escapeHTML(option)}"> ${escapeHTML(option)}`;
+  label.querySelector("input").onchange=e=>selected=e.target.value;
+  opts.appendChild(label);
+ });
+ document.getElementById("submitAnswer").onclick=()=>{
+  if(answered){
+   quizIndex++;showQuestion();return;
+  }
+  if(!selected){alert("Please select an answer.");return;}
+  answered=true;
+  const correct=selected===q.a;
+  if(correct)score++;
+  document.getElementById("feedback").innerHTML=`<p>${correct?"✅ Correct answer!":"❌ Incorrect. Correct answer: "+escapeHTML(q.a)}</p>`;
+  document.getElementById("submitAnswer").textContent=quizIndex===questions.length-1?"See Results":"Next Question";
+ };
+}
+render();
+</script>
+</body>
+</html>
