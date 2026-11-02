@@ -165,18 +165,10 @@ This project demonstrates:
 
 
 
----
-
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=160&color=0:10102B,50:392A75,100:00C9D8&text=DEVELOPER&fontSize=42&fontColor=FFFFFF&fontAlignY=45" width="100%" />
-
-<br/>
-
-# MOHAMMED SAAQIB MOHIDDIN
-
-### Computer Science & Engineering
-### Artificial Intelligence
+### COMPUTER SCIENCE & ENGINEERING
+### ARTIFICIAL INTELLIGENCE
 
 **Python Developer · Technology Enthusiast**
 
@@ -196,26 +188,7 @@ Building practical applications with Python and modern technologies.
 
 <img src="https://img.shields.io/badge/DEVELOPED%20BY-SAAQIB%20MOHIDDIN-10102B?style=flat-square&labelColor=392A75" />
 
-<br/><br/>
-
 </div>
 
----
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=rect&height=90&color=0:10102B,50:392A75,100:00C9D8&text=THANK%20YOU&fontSize=34&fontColor=FFFFFF" width="100%" />
-
-### Smart Conversations · Simple Python · Practical Learning
-
-<img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-
-<br/><br/>
-
-**Thank you for exploring this project!**
-
-</div>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=0:00C9D8,50:392A75,100:10102B&section=footer" width="100%" />
 
 
