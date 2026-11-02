@@ -53,19 +53,6 @@ It accepts user messages, identifies predefined questions and provides suitable 
 | Conditional Statements | Matches messages with predefined responses |
 | File Handling | Saves and retrieves conversation history |
 
-## 🎨 DESIGN THEME
-
-### MIDNIGHT NAVY × ROYAL PURPLE × ELECTRIC CYAN
-
-| Design Element | Colour | Hex Code |
-|---|---|---|
-| Primary | Midnight Navy | `#10102B` |
-| Secondary | Royal Purple | `#392A75` |
-| Accent | Electric Cyan | `#00C9D8` |
-| Highlight | Success Teal | `#20A486` |
-| Text | White | `#FFFFFF` |
-
-**Design Identity:** Modern • Minimal • Technology • Conversational
 
 ## 📁 PROJECT STRUCTURE
 
