@@ -164,51 +164,58 @@ This project demonstrates:
 ---
 
 
+
 ---
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=100&color=0:10102B,50:392A75,100:00C9D8&text=DEVELOPER%20PROFILE&fontSize=32&fontColor=FFFFFF" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=160&color=0:10102B,50:392A75,100:00C9D8&text=DEVELOPER&fontSize=42&fontColor=FFFFFF&fontAlignY=45" width="100%" />
 
 <br/>
 
-# 👨‍💻 MOHAMMED SAAQIB MOHIDDIN
+# MOHAMMED SAAQIB MOHIDDIN
 
-### COMPUTER SCIENCE & ENGINEERING
-### ARTIFICIAL INTELLIGENCE
+### Computer Science & Engineering
+### Artificial Intelligence
 
-**Python Developer | Technology Enthusiast**
+**Python Developer · Technology Enthusiast**
 
 Building practical applications with Python and modern technologies.
 
 <br/>
 
-<img src="https://img.shields.io/badge/DEVELOPER-SAAQIB%20MOHIDDIN-392A75?style=for-the-badge&logo=github&logoColor=white" />
-
-<br/><br/>
-
 <a href="https://github.com/saaqibmohiddin">
-<img src="https://img.shields.io/badge/GitHub-Visit%20My%20Profile-10102B?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/GITHUB-VISIT%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
 <br/><br/>
 
 <img src="https://img.shields.io/badge/PROJECT-PYTHON%20CHATBOT-00C9D8?style=for-the-badge" />
 
-<br/>
+<br/><br/>
 
-**Developed by Saaqib Mohiddin**
+<img src="https://img.shields.io/badge/DEVELOPED%20BY-SAAQIB%20MOHIDDIN-10102B?style=flat-square&labelColor=392A75" />
+
+<br/><br/>
+
+</div>
 
 ---
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=0:00C9D8,50:392A75,100:10102B&section=footer" width="100%" />
+<div align="center">
 
-#  THANK YOU FOR VISITING!
+<img src="https://capsule-render.vercel.app/api?type=rect&height=90&color=0:10102B,50:392A75,100:00C9D8&text=THANK%20YOU&fontSize=34&fontColor=FFFFFF" width="100%" />
 
-### SMART CONVERSATIONS
-### SIMPLE PYTHON • PRACTICAL LEARNING
+### Smart Conversations · Simple Python · Practical Learning
 
-![Python](https://img.shields.io/badge/POWERED_BY-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
+<img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
+<br/><br/>
+
+**Thank you for exploring this project!**
 
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=0:00C9D8,50:392A75,100:10102B&section=footer" width="100%" />
+
 
