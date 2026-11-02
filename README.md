@@ -3,7 +3,6 @@
 
 <div align="center">
 
-# 🤖 PYTHON CHATBOT
 
 ### Smart Conversations | Simple Interaction | Python
 
