@@ -11,7 +11,6 @@
 ![File Handling](https://img.shields.io/badge/FILE_HANDLING-00C9D8?style=for-the-badge)
 ![Status](https://img.shields.io/badge/STATUS-COMPLETED-20A486?style=for-the-badge)
 
-**Developed by Saaqib Mohiddin**
 
 </div>
 
