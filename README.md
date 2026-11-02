@@ -122,58 +122,110 @@ Try these messages:
 
 <div align="center">
 
+
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/CHATBOT%20ARCHITECTURE-MIDNIGHT%20INDIGO-10102B?style=for-the-badge" />
+
 # 🔄 HOW THE CHATBOT WORKS
 
-**A simple journey from user message to chatbot response**
+**From user message to automated response**
 
-<img src="https://img.shields.io/badge/INPUT-10102B?style=for-the-badge" />
-<img src="https://img.shields.io/badge/PROCESS-392A75?style=for-the-badge" />
-<img src="https://img.shields.io/badge/OUTPUT-00C9D8?style=for-the-badge" />
+<img src="https://img.shields.io/badge/01-USER%20INPUT-10102B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/02-PROCESSING-392A75?style=for-the-badge" />
+<img src="https://img.shields.io/badge/03-RESPONSE-00C9D8?style=for-the-badge" />
 
 </div>
 
-```mermaid
-%%{init: {'theme':'base','themeVariables': {
-  'background':'#10102B',
-  'primaryColor':'#202044',
-  'primaryTextColor':'#FFFFFF',
-  'primaryBorderColor':'#00C9D8',
-  'lineColor':'#00C9D8',
-  'secondaryColor':'#392A75',
-  'tertiaryColor':'#202044',
-  'edgeLabelBackground':'#10102B',
-  'fontFamily':'Arial'
-}}}%%
+### ⚡ THE CONVERSATION PIPELINE
 
-flowchart TD
+<table>
+<tr>
+<th align="center">STAGE</th>
+<th>PROCESS</th>
+<th>DESCRIPTION</th>
+</tr>
+<tr>
+<td align="center">🟦 01</td>
+<td><b>USER INPUT</b></td>
+<td>User enters a message into the chatbot.</td>
+</tr>
+<tr>
+<td align="center">🟪 02</td>
+<td><b>MESSAGE PROCESSING</b></td>
+<td>Python receives and checks the message.</td>
+</tr>
+<tr>
+<td align="center">🟨 03</td>
+<td><b>RESPONSE MATCHING</b></td>
+<td>The chatbot checks for a predefined response.</td>
+</tr>
+<tr>
+<td align="center">🟩 04</td>
+<td><b>CHATBOT RESPONSE</b></td>
+<td>Returns a matching reply or a default response.</td>
+</tr>
+<tr>
+<td align="center">🟦 05</td>
+<td><b>HISTORY STORAGE</b></td>
+<td>Conversation history is saved in a file.</td>
+</tr>
+<tr>
+<td align="center">🟪 06</td>
+<td><b>CONTINUE / EXIT</b></td>
+<td>User can continue chatting or exit the chatbot.</td>
+</tr>
+</table>
 
-    A(["👤 USER"]) --> B["💬 Enter Message"]
-    B --> C["🐍 Python Chatbot"]
-    C --> D{"🔍 Match User Message?"}
-
-    D -->|YES| E["🤖 Predefined Response"]
-    D -->|NO| F["💡 Default Response"]
-
-    E --> G["💾 Save Chat History"]
-    F --> G
-
-    G --> H{"Continue Chatting?"}
-
-    H -->|YES| B
-    H -->|NO| I(["👋 Exit Chatbot"])
-
-    classDef start fill:#10102B,stroke:#00C9D8,color:#FFFFFF,stroke-width:3px
-    classDef process fill:#392A75,stroke:#00C9D8,color:#FFFFFF,stroke-width:2px
-    classDef decision fill:#202044,stroke:#E8B95B,color:#FFFFFF,stroke-width:2px
-    classDef result fill:#087E8B,stroke:#00C9D8,color:#FFFFFF,stroke-width:2px
-
-    class A,I start
-    class B,C,G process
-    class D,H decision
-    class E,F result
-```
+### 🔁 CONVERSATION LOGIC
 
 <div align="center">
+
+<img src="https://img.shields.io/badge/USER%20MESSAGE-10102B?style=for-the-badge" />
+
+⬇️
+
+<img src="https://img.shields.io/badge/PYTHON%20PROCESSING-392A75?style=for-the-badge" />
+
+⬇️
+
+<img src="https://img.shields.io/badge/MESSAGE%20MATCHING-E8B95B?style=for-the-badge" />
+
+⬇️
+
+<img src="https://img.shields.io/badge/CHATBOT%20RESPONSE-087E8B?style=for-the-badge" />
+
+⬇️
+
+<img src="https://img.shields.io/badge/SAVE%20CHAT%20HISTORY-10102B?style=for-the-badge" />
+
+⬇️
+
+<img src="https://img.shields.io/badge/CONTINUE%20OR%20EXIT-392A75?style=for-the-badge" />
+
+</div>
+
+### 🎨 WORKFLOW DESIGN IDENTITY
+
+| Design Element | Colour | Hex Code |
+|---|---|---|
+| Primary | Midnight Indigo | `#10102B` |
+| Secondary | Deep Violet | `#392A75` |
+| Accent | Neon Cyan | `#00C9D8` |
+| Highlight | Premium Gold | `#E8B95B` |
+| Text | White | `#FFFFFF` |
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/SMART%20CONVERSATIONS-392A75?style=for-the-badge" />
+<img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
+</div>
+
+---
+
 
 ### ⚡ CHATBOT PROCESS
 
