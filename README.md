@@ -165,7 +165,14 @@ This project demonstrates:
 
 
 
+
+---
+
 <div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=0:10102B,50:392A75,100:00C9D8&text=DEVELOPER%20PROFILE&fontSize=30&fontColor=FFFFFF&fontAlignY=50" width="100%" />
+
+<br/>
 
 ### COMPUTER SCIENCE & ENGINEERING
 ### ARTIFICIAL INTELLIGENCE
@@ -174,25 +181,34 @@ This project demonstrates:
 
 Building practical applications with Python and modern technologies.
 
-<a href="https://github.com/saaqibmohiddin">
-  <img src="https://img.shields.io/badge/GITHUB-VISIT%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" />
-</a>
-
 <br/>
 
 <a href="https://github.com/saaqibmohiddin">
-<img src="https://img.shields.io/badge/GITHUB-VISIT%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/GITHUB-VISIT%20MY%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" alt="Visit Saaqib's GitHub Profile"/>
 </a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/PROJECT-PYTHON%20CHATBOT-00C9D8?style=for-the-badge" />
+<img src="https://img.shields.io/badge/PROJECT-PYTHON%20CHATBOT-00C9D8?style=for-the-badge" alt="Python Chatbot Project"/>
 
 <br/><br/>
 
 <img src="https://img.shields.io/badge/DEVELOPED%20BY-SAAQIB%20MOHIDDIN-10102B?style=flat-square&labelColor=392A75" />
 
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:392A75,100:00C9D8" width="100%" />
+
+### 💜 THANK YOU FOR VISITING!
+
+**SMART CONVERSATIONS · SIMPLE PYTHON · PRACTICAL LEARNING**
+
+<img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
 </div>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=90&color=0:00C9D8,50:392A75,100:10102B&section=footer" width="100%" />
+
 
 
 
