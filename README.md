@@ -1,5 +1,5 @@
 
-![Python ChatBot](https://capsule-render.vercel.app/api?type=waving&height=200&color=0:10102B,50:392A75,100:00C9D8&text=PYTHON%20CHATBOT&fontSize=30&fontColor=FFFFFF&desc=SMART%20CONVERSATIONAL%20SYSTEM&descSize=16)
+![Python ChatBot](https://capsule-render.vercel.app/api?type=waving&height=100&color=0:10102B,50:392A75,100:00C9D8&text=PYTHON%20CHATBOT&fontSize=42&fontColor=FFFFFF&desc=SMART%20CONVERSATIONAL%20SYSTEM&descSize=16)
 
 <div align="center">
 
