@@ -163,32 +163,52 @@ This project demonstrates:
 
 ---
 
-## 👨‍💻 DEVELOPER
-
-<div align="center">
-
-### MOHAMMED SAAQIB MOHIDDIN
-
-**Computer Science & Engineering | Artificial Intelligence**
-
-Python Developer | Technology Enthusiast
-
-Building practical applications with Python and modern technologies.
-
-[![GitHub](https://img.shields.io/badge/GITHUB-SAAQIBMOHIDDIN-10102B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/saaqibmohiddin)
-
-**Developed by Saaqib Mohiddin**
-
-</div>
 
 ---
 
 <div align="center">
 
-![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:00C9D8,50:392A75,100:10102B&height=100&section=footer)
+<img src="https://capsule-render.vercel.app/api?type=rect&height=100&color=0:10102B,50:392A75,100:00C9D8&text=DEVELOPER%20PROFILE&fontSize=32&fontColor=FFFFFF" width="100%" />
 
-###  THANK YOU FOR VISITING!
+<br/>
 
-**SMART CONVERSATIONS • SIMPLE PYTHON • PRACTICAL LEARNING**
+# 👨‍💻 MOHAMMED SAAQIB MOHIDDIN
+
+### COMPUTER SCIENCE & ENGINEERING
+### ARTIFICIAL INTELLIGENCE
+
+**Python Developer | Technology Enthusiast**
+
+Building practical applications with Python and modern technologies.
+
+<br/>
+
+<img src="https://img.shields.io/badge/DEVELOPER-SAAQIB%20MOHIDDIN-392A75?style=for-the-badge&logo=github&logoColor=white" />
+
+<br/><br/>
+
+<a href="https://github.com/saaqibmohiddin">
+<img src="https://img.shields.io/badge/GitHub-Visit%20My%20Profile-10102B?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/PROJECT-PYTHON%20CHATBOT-00C9D8?style=for-the-badge" />
+
+<br/>
+
+**Developed by Saaqib Mohiddin**
+
+---
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=0:00C9D8,50:392A75,100:10102B&section=footer" width="100%" />
+
+#  THANK YOU FOR VISITING!
+
+### SMART CONVERSATIONS
+### SIMPLE PYTHON • PRACTICAL LEARNING
+
+![Python](https://img.shields.io/badge/POWERED_BY-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 </div>
+
