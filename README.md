@@ -174,6 +174,10 @@ This project demonstrates:
 
 Building practical applications with Python and modern technologies.
 
+<a href="https://github.com/saaqibmohiddin">
+  <img src="https://img.shields.io/badge/GITHUB-VISIT%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
 <br/>
 
 <a href="https://github.com/saaqibmohiddin">
