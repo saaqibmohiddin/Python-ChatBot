@@ -112,7 +112,7 @@ Try these messages:
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/CHATBOT%20ARCHITECTURE-COVERSATIONAL FLOW%20INDIGO-10102B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/CHATBOT%20ARCHITECTURE-COVERSATIONAL%20FLOW-10102B?style=for-the-badge" />
 
 # 🔄 HOW THE CHATBOT WORKS
 
