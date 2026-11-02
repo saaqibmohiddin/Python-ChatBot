@@ -1,106 +1,125 @@
-"Python ChatBot Banner" (https://capsule-render.vercel.app/api?type=waving&height=200&color=0:10102B,50:392A75,100:00C9D8&text=PYTHON%20CHATBOT&fontSize=42&fontColor=FFFFFF&fontAlignY=40&desc=RULE-BASED%20CONVERSATIONAL%20SYSTEM&descSize=15&descAlignY=62)
 
-<div align="center">🤖 PYTHON CHATBOT
+![Python ChatBot](https://capsule-render.vercel.app/api?type=waving&height=200&color=0:10102B,50:392A75,100:00C9D8&text=PYTHON%20CHATBOT&fontSize=42&fontColor=FFFFFF&desc=SMART%20CONVERSATIONAL%20SYSTEM&descSize=16)
 
-Smart Conversations • Simple Interaction • Python
+<div align="center">
 
-"Python" (https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-"Chatbot" (https://img.shields.io/badge/Chatbot-392A75?style=for-the-badge)
-"File Handling" (https://img.shields.io/badge/File_Handling-00C9D8?style=for-the-badge)
-"Status" (https://img.shields.io/badge/Project-Completed-20A486?style=for-the-badge)
+# 🤖 PYTHON CHATBOT
 
-A simple rule-based chatbot developed using Python that responds to messages and stores conversation history.
+### Smart Conversations | Simple Interaction | Python
 
-</div>---
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Chatbot](https://img.shields.io/badge/CHATBOT-392A75?style=for-the-badge)
+![File Handling](https://img.shields.io/badge/FILE_HANDLING-00C9D8?style=for-the-badge)
+![Status](https://img.shields.io/badge/STATUS-COMPLETED-20A486?style=for-the-badge)
 
-🌌 01. PROJECT OVERVIEW
+**Developed by Saaqib Mohiddin**
 
-Python ChatBot is a simple rule-based conversational application developed using Python. It recognizes predefined user messages and provides appropriate responses.
+</div>
 
-The application also saves conversations in a text file using file handling.
+---
 
-✨ 02. KEY FEATURES
+## 🌌 PROJECT OVERVIEW
 
-Feature| Description
-💬 Message Interaction| Responds to user messages
-🧠 Question Matching| Recognizes predefined questions
-👋 Greetings| Responds to common greetings
-💾 Chat History| Saves conversation history
-📂 File Handling| Reads and writes chat records
-🔄 Continuous Chat| Supports repeated interaction
+Python ChatBot is a simple rule-based conversational application developed using Python.
 
-🛠️ 03. TECHNOLOGIES USED
+It accepts user messages, identifies predefined questions and provides suitable responses. It also stores conversation history in a text file.
 
-<div align="center">"Python" (https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-"Loops" (https://img.shields.io/badge/Loops-392A75?style=flat-square)
-"Conditions" (https://img.shields.io/badge/Conditional_Statements-00C9D8?style=flat-square)
-"File Handling" (https://img.shields.io/badge/File_Handling-20A486?style=flat-square)
+## ✨ KEY FEATURES
 
-</div>Technology| Purpose
-Python| Main programming language
-Loops| Maintains continuous interaction
-Conditional Statements| Matches messages with predefined responses
-File Handling| Stores and retrieves conversation history
+| Feature | Description |
+|---|---|
+| 💬 Message Interaction | Responds to user messages |
+| 🧠 Question Matching | Recognizes basic questions |
+| 👋 Greetings | Responds to common greetings |
+| 💾 Chat History | Saves conversation history |
+| 📂 File Handling | Reads and writes chat records |
+| 🔄 Continuous Interaction | Allows repeated conversations |
 
-🎨 04. DESIGN THEME
+## 🛠️ TECHNOLOGIES USED
 
-<div align="center">MIDNIGHT INDIGO × NEON VIOLET
+<div align="center">
 
-Design Element| Colour| Hex Code
-Primary Theme| Midnight Indigo| "#10102B"
-Secondary Theme| Neon Violet| "#392A75"
-Accent Colour| Electric Cyan| "#00C9D8"
-Highlight Colour| Success Teal| "#20A486"
-Text Colour| White| "#FFFFFF"
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Loops](https://img.shields.io/badge/Loops-392A75?style=flat-square)
+![Conditions](https://img.shields.io/badge/Conditions-00C9D8?style=flat-square)
+![File Handling](https://img.shields.io/badge/File_Handling-20A486?style=flat-square)
 
-Design Identity: Modern • Minimal • Technology • Conversational
+</div>
 
-</div>📁 05. PROJECT STRUCTURE
+| Technology | Purpose |
+|---|---|
+| Python | Main programming language |
+| Loops | Maintains continuous chatbot interaction |
+| Conditional Statements | Matches messages with predefined responses |
+| File Handling | Saves and retrieves conversation history |
 
-🤖 Python-ChatBot/
+## 🎨 DESIGN THEME
+
+### MIDNIGHT NAVY × ROYAL PURPLE × ELECTRIC CYAN
+
+| Design Element | Colour | Hex Code |
+|---|---|---|
+| Primary | Midnight Navy | `#10102B` |
+| Secondary | Royal Purple | `#392A75` |
+| Accent | Electric Cyan | `#00C9D8` |
+| Highlight | Success Teal | `#20A486` |
+| Text | White | `#FFFFFF` |
+
+**Design Identity:** Modern • Minimal • Technology • Conversational
+
+## 📁 PROJECT STRUCTURE
+
+```text
+Python-ChatBot/
 │
-├── 📄 README.md
-├── 💬 chatbot.py
-├── 🌐 index.html
-└── 💾 chat_history.txt
+├── README.md
+├── chatbot.py
+├── index.html
+└── chat_history.txt
+```
 
-⚙️ 06. INSTALLATION & SETUP
+## ⚙️ INSTALLATION & SETUP
 
-Requirements
+### Requirements
 
 - Python 3.x
 - Visual Studio Code (recommended)
 
-Step 1 — Open the project folder
+### Run the Project
 
-Step 2 — Open the terminal
+**Step 1:** Open the project folder in VS Code.
 
-Step 3 — Run the chatbot
+**Step 2:** Open the terminal.
 
+**Step 3:** Run the following command:
+
+```bash
 python chatbot.py
+```
 
-For Windows, you can also run:
+For Windows, you can also use:
 
+```bash
 py chatbot.py
+```
 
-Step 4 — Start chatting
+**Step 4:** Enter messages and start chatting.
 
-Enter a message in the terminal and interact with the chatbot.
+## 💬 SAMPLE QUESTIONS
 
-💬 07. SAMPLE QUESTIONS
+Try these messages:
 
-Try these example messages:
+- hello
+- how are you
+- what is ai
+- who created you
+- good morning
+- good night
+- bye
 
-- "hello"
-- "how are you"
-- "what is ai"
-- "who created you"
-- "good morning"
-- "good night"
-- "bye"
+## 🔄 HOW IT WORKS
 
-🔄 08. HOW IT WORKS
-
+```mermaid
 flowchart TD
     A["👤 User"] --> B["💬 Enter Message"]
     B --> C["🐍 Python Chatbot"]
@@ -109,7 +128,7 @@ flowchart TD
     D -->|Not Matched| F["💡 Default Response"]
     E --> G["💾 Save Chat History"]
     F --> G
-    G --> H{"Continue Chatting?"}
+    G --> H{"Continue?"}
     H -->|Yes| B
     H -->|No| I["👋 Exit Chatbot"]
 
@@ -120,8 +139,9 @@ flowchart TD
     class A,B start
     class C,D,G,H process
     class E,F,I result
+```
 
-🎯 09. PROJECT OBJECTIVE
+## 🎯 PROJECT OBJECTIVE
 
 The objective is to develop a simple and user-friendly chatbot using Python.
 
@@ -131,38 +151,44 @@ This project demonstrates:
 - Loops and conditional statements.
 - User input and output.
 - Rule-based response matching.
-- File handling and data storage.
+- File handling and conversation storage.
 
-🚀 10. FUTURE ENHANCEMENTS
+## 🚀 FUTURE ENHANCEMENTS
 
 - Add more predefined responses.
 - Improve conversation handling.
 - Develop a graphical user interface.
-- Add database-based chat storage.
+- Add database-based conversation storage.
 - Explore Natural Language Processing (NLP).
 
 ---
 
-👨‍💻 11. DEVELOPER
+## 👨‍💻 DEVELOPER
 
-<div align="center">MOHAMMED SAAQIB MOHIDDIN
+<div align="center">
 
-Computer Science & Engineering | Artificial Intelligence
+### MOHAMMED SAAQIB MOHIDDIN
 
-Python Developer • Technology Enthusiast
+**Computer Science & Engineering | Artificial Intelligence**
+
+Python Developer | Technology Enthusiast
 
 Building practical applications with Python and modern technologies.
 
-""GitHub" (https://img.shields.io/badge/GitHub-SAAQIBMOHIDDIN-10102B?style=for-the-badge&logo=github&logoColor=white)" (https://github.com/saaqibmohiddin)
+[![GitHub](https://img.shields.io/badge/GITHUB-SAAQIBMOHIDDIN-10102B?style=for-the-badge&logo=github&logoColor=white)](https://github.com/saaqibmohiddin)
 
-Developed by Saaqib Mohiddin
+**Developed by Saaqib Mohiddin**
 
-</div>---
+</div>
 
-<div align="center">"Footer" (https://capsule-render.vercel.app/api?type=waving&color=0:10102B,50:392A75,100:00C9D8&height=100&section=footer)
+---
 
- THANK YOU FOR VISITING!
+<div align="center">
 
-SMART CONVERSATIONS • SIMPLE PYTHON • PRACTICAL LEARNING
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:00C9D8,50:392A75,100:10102B&height=100&section=footer)
+
+###  THANK YOU FOR VISITING!
+
+**SMART CONVERSATIONS • SIMPLE PYTHON • PRACTICAL LEARNING**
 
 </div>
