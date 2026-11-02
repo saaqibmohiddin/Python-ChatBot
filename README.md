@@ -117,29 +117,82 @@ Try these messages:
 - good night
 - bye
 
-## 🔄 HOW IT WORKS
+
+---
+
+<div align="center">
+
+# 🔄 HOW THE CHATBOT WORKS
+
+**A simple journey from user message to chatbot response**
+
+<img src="https://img.shields.io/badge/INPUT-10102B?style=for-the-badge" />
+<img src="https://img.shields.io/badge/PROCESS-392A75?style=for-the-badge" />
+<img src="https://img.shields.io/badge/OUTPUT-00C9D8?style=for-the-badge" />
+
+</div>
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables': {
+  'background':'#10102B',
+  'primaryColor':'#202044',
+  'primaryTextColor':'#FFFFFF',
+  'primaryBorderColor':'#00C9D8',
+  'lineColor':'#00C9D8',
+  'secondaryColor':'#392A75',
+  'tertiaryColor':'#202044',
+  'edgeLabelBackground':'#10102B',
+  'fontFamily':'Arial'
+}}}%%
+
 flowchart TD
-    A["👤 User"] --> B["💬 Enter Message"]
+
+    A(["👤 USER"]) --> B["💬 Enter Message"]
     B --> C["🐍 Python Chatbot"]
-    C --> D{"🔍 Match Message"}
-    D -->|Matched| E["🤖 Predefined Response"]
-    D -->|Not Matched| F["💡 Default Response"]
+    C --> D{"🔍 Match User Message?"}
+
+    D -->|YES| E["🤖 Predefined Response"]
+    D -->|NO| F["💡 Default Response"]
+
     E --> G["💾 Save Chat History"]
     F --> G
-    G --> H{"Continue?"}
-    H -->|Yes| B
-    H -->|No| I["👋 Exit Chatbot"]
 
-    classDef start fill:#10102B,stroke:#00C9D8,color:#FFFFFF
-    classDef process fill:#392A75,stroke:#00C9D8,color:#FFFFFF
-    classDef result fill:#20A486,stroke:#FFFFFF,color:#FFFFFF
+    G --> H{"Continue Chatting?"}
 
-    class A,B start
-    class C,D,G,H process
-    class E,F,I result
+    H -->|YES| B
+    H -->|NO| I(["👋 Exit Chatbot"])
+
+    classDef start fill:#10102B,stroke:#00C9D8,color:#FFFFFF,stroke-width:3px
+    classDef process fill:#392A75,stroke:#00C9D8,color:#FFFFFF,stroke-width:2px
+    classDef decision fill:#202044,stroke:#E8B95B,color:#FFFFFF,stroke-width:2px
+    classDef result fill:#087E8B,stroke:#00C9D8,color:#FFFFFF,stroke-width:2px
+
+    class A,I start
+    class B,C,G process
+    class D,H decision
+    class E,F result
 ```
+
+<div align="center">
+
+### ⚡ CHATBOT PROCESS
+
+| Stage | What happens |
+|:---|:---|
+| 👤 Input | User enters a message |
+| 🐍 Processing | Python checks the message |
+| 🔍 Matching | Finds a predefined response |
+| 🤖 Response | Sends a matching or default reply |
+| 💾 Storage | Saves conversation history |
+| 🔄 Loop | Continues or exits the chatbot |
+
+<img src="https://img.shields.io/badge/SMART%20CONVERSATIONS-392A75?style=for-the-badge" />
+<img src="https://img.shields.io/badge/POWERED%20BY-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
+</div>
+
+---
+
 
 ## 🎯 PROJECT OBJECTIVE
 
