@@ -170,26 +170,26 @@ This project demonstrates:
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=130&color=0:10102B,50:392A75,100:00C9D8&text=DEVELOPER%20PROFILE&fontSize=30&fontColor=FFFFFF&fontAlignY=50" width="100%" />
-
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=rect&height=8&color=0:392A75,100:00C9D8" width="100%" />
 
 ### COMPUTER SCIENCE & ENGINEERING
 ### ARTIFICIAL INTELLIGENCE
 
-**Python Developer · Technology Enthusiast**
+<br/>
+
+**PYTHON DEVELOPER** · **TECHNOLOGY ENTHUSIAST**
 
 Building practical applications with Python and modern technologies.
 
-<br/>
+<br/><br/>
 
 <a href="https://github.com/saaqibmohiddin">
-<img src="https://img.shields.io/badge/GITHUB-VISIT%20MY%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" alt="Visit Saaqib's GitHub Profile"/>
+<img src="https://img.shields.io/badge/GITHUB-VISIT%20MY%20PROFILE-392A75?style=for-the-badge&logo=github&logoColor=white" alt="Visit GitHub Profile"/>
 </a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/PROJECT-PYTHON%20CHATBOT-00C9D8?style=for-the-badge" alt="Python Chatbot Project"/>
+<img src="https://img.shields.io/badge/PROJECT-PYTHON%20CHATBOT-00C9D8?style=for-the-badge" />
 
 <br/><br/>
 
@@ -197,17 +197,22 @@ Building practical applications with Python and modern technologies.
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:392A75,100:00C9D8" width="100%" />
-
-### 💜 THANK YOU FOR VISITING!
-
-**SMART CONVERSATIONS · SIMPLE PYTHON · PRACTICAL LEARNING**
-
-<img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://capsule-render.vercel.app/api?type=rect&height=8&color=0:00C9D8,100:392A75" width="100%" />
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=90&color=0:00C9D8,50:392A75,100:10102B&section=footer" width="100%" />
+---
+
+<div align="center">
+
+###  THANK YOU FOR VISITING!
+
+**SMART CONVERSATIONS · SIMPLE PYTHON · PRACTICAL LEARNING**
+
+<img src="https://img.shields.io/badge/POWERED%20BY-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+
+</div>
+
 
 
 
