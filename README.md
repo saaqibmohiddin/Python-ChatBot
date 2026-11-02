@@ -207,15 +207,6 @@ Try these messages:
 
 </div>
 
-### 🎨 WORKFLOW DESIGN IDENTITY
-
-| Design Element | Colour | Hex Code |
-|---|---|---|
-| Primary | Midnight Indigo | `#10102B` |
-| Secondary | Deep Violet | `#392A75` |
-| Accent | Neon Cyan | `#00C9D8` |
-| Highlight | Premium Gold | `#E8B95B` |
-| Text | White | `#FFFFFF` |
 
 <div align="center">
 
