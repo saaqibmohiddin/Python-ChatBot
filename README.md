@@ -214,10 +214,6 @@ Try these messages:
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/SMART%20CONVERSATIONS-392A75?style=for-the-badge" />
-<img src="https://img.shields.io/badge/BUILT%20WITH-PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-
-</div>
 
 ---
 
